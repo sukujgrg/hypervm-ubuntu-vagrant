@@ -50,7 +50,8 @@
     "type": "shell",
     "execute_command": "echo 'vagrant' | sudo -S -E sh {{.Path}}",
     "scripts": [
-      "./bin/setup.sh"
+      "./bin/setup.sh",
+      "./bin/cleanup.sh"
     ]
   }],
   "post-processors": [

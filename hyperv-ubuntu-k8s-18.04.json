@@ -50,8 +50,9 @@
     "type": "shell",
     "execute_command": "echo 'vagrant' | sudo -S -E sh {{.Path}}",
     "scripts": [
-      "./bin/install.sh",
-      "./bin/k8s.sh"
+      "./bin/setup.sh",
+      "./bin/k8s.sh",
+      "./bin/cleanup.sh"
     ]
   }],
   "post-processors": [

@@ -1,12 +1,12 @@
 {
   "variables": {
-    "vm_name": "ubuntu-k8s-18-04-1",
+    "vm_name": "ubuntu-kubestar-18.04.3",
     "cpu": "1",
     "ram_size": "512",
-    "disk_size": "8192",
-    "iso_url": "http://cdimage.ubuntu.com/ubuntu/releases/bionic/release/ubuntu-18.04.1-server-amd64.iso",
+    "disk_size": "10240",
+    "iso_url": "http://cdimage.ubuntu.com/ubuntu/releases/bionic/release/ubuntu-18.04.3-server-amd64.iso",
     "iso_checksum_type": "sha1",
-    "iso_checksum": "87bedd68607f059ca973f86346bbdf1caa6e1077",
+    "iso_checksum": "97f4cb265e01811f95cfa607286827b37720f5e0",
     "hyperv_switchname": "{{env `hyperv_switchname`}}",
     "username" : "vagrant",
     "password" : "vagrant"
@@ -51,7 +51,8 @@
     "execute_command": "echo 'vagrant' | sudo -S -E sh {{.Path}}",
     "scripts": [
       "./bin/setup.sh",
-      "./bin/k8s.sh",
+      "./bin/docker-install.sh",
+      "./bin/kube-install.sh",
       "./bin/cleanup.sh"
     ]
   }],

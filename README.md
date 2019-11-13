@@ -12,7 +12,7 @@ Spin up a kubernetes cluster on Windows 10 as much quickly as possible with Vagr
 ### How to build the box
 
 ```
-packer.exe build -force -var 'hyperv_switchname=<Your VSwitch Name>' -on-error=ask .\hyperv-ubuntu-k8s-18.04.json
+packer.exe build -force -var 'hyperv_switchname=<Your VSwitch Name>' -on-error=ask .\hyperv-ubuntu-18.04-kubeadm-1.15.json
 ```
 
 ### What all packages and docker images are baked in this vagrant box?

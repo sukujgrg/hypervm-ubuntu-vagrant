@@ -10,5 +10,3 @@ add-apt-repository "deb https://apt.kubernetes.io/ kubernetes-xenial main"
 apt-get update -y && apt-get install -y kubelet=1.15.5-00 kubeadm=1.15.5-00 kubectl=1.15.5-00
 
 apt-mark hold kubelet kubeadm kubectl
-
-kubeadm config images pull

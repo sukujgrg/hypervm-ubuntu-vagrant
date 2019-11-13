@@ -1,9 +1,9 @@
 #!/bin/sh
 
-date -u > /etc/vagrant_box_build_time
+date -u | tee /etc/vagrant_box_build_time
 
 # setting Password-less sudo for vagrant ..
-echo 'vagrant ALL=NOPASSWD:ALL' > /etc/sudoers.d/vagrant
+echo 'vagrant ALL=NOPASSWD:ALL' | tee /etc/sudoers.d/vagrant
 
 # to avoid a reverse DNS lookup on the connecting SSH client which can take many seconds ..
 sed -i 's/#UseDNS no/UseDNS no/g' /etc/ssh/sshd_config

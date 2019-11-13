@@ -1,6 +1,6 @@
 {
   "variables": {
-    "vm_name": "ubuntu-kubestar-18.04.3",
+    "vm_name": "ubuntu-18.04.3-kubeadm-1.15.5",
     "cpu": "1",
     "ram_size": "512",
     "disk_size": "10240",
@@ -53,6 +53,7 @@
       "./bin/setup.sh",
       "./bin/docker-install.sh",
       "./bin/kube-install.sh",
+      "./bin/kube-prep.sh",
       "./bin/cleanup.sh"
     ]
   }],
